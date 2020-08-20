@@ -1,0 +1,16 @@
+{
+  "name": "dumb-baseball",
+  "version": "1.0.0",
+  "description": "A dumb script for generating dumb names",
+  "main": "run.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "baseball": "node ./dist/main.js"
+  },
+  "author": "Ryan Overhauser",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
