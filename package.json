@@ -2,15 +2,21 @@
   "name": "dumb-baseball",
   "version": "1.0.0",
   "description": "A dumb script for generating dumb names",
-  "main": "run.js",
-  "scripts": {
-    "build": "webpack --mode production",
-    "baseball": "node ./dist/main.js"
-  },
-  "author": "Ryan Overhauser",
   "license": "MIT",
-  "devDependencies": {
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+  "author": "Ryan Overhauser <ryan.overhauser@gmail.com> (https://ryanoverhauser.com)",
+  "main": "src/baseball.js",
+  "bin": {
+    "dumb-baseball": "bin/dumb-baseball"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanoverhauser/dumb-baseball.git"
+  },
+  "scripts": {
+    "generate": "./bin/dumb-baseball"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "yargs": "^15.4.1"
   }
 }

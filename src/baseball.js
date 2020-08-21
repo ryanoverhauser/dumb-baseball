@@ -100,7 +100,7 @@ const swapNode = function(node) {
 /**
  * Just fuck my shit up
  */
-const wonkify = function(name, wonkiness = 0.2) {
+const wonkify = function(name, wonkiness) {
     // get an array of the letters in the name
     let letters = [...name]
 
@@ -122,7 +122,7 @@ const wonkify = function(name, wonkiness = 0.2) {
     return nodes.map(c => c.text).join('')
 }
 
-export default () => {
+export default (wonkiness = 0.2) => {
     let name = getRandom(names.firstNames) + ' ' + getRandom(names.lastNames)
-    return wonkify(name)
+    return wonkify(name, wonkiness)
 }

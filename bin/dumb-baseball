@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+var argv = require('yargs')
+    .option('n', {
+        alias: 'number',
+        default: 10,
+        describe: 'Number of names to generate',
+        type: 'num'
+    })
+    .option('w', {
+        alias: 'wonkiness',
+        default: 20,
+        describe: 'Wonkiness percentage from 0-100',
+        type: 'num'
+    })
+    .usage('Usage: $0 -n [num] -w [num]')
+    .argv;
+
+require = require('esm')(module);
+require('../src/cli').cli(argv);
